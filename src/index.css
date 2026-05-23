@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+  --color-wa-green: #00E676;
+  --color-wa-dark: #075E54;
+  --color-wa-teal: #128C7E;
+  --color-wa-light: #DCF8C6;
+  --color-wa-bg: #F4F0EB;
+  --color-wa-blue: #34B7F1;
+  --font-roboto: 'Roboto', sans-serif;
+  
+  --animate-marquee: marquee 15s linear infinite;
+  
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-wa-bg text-[#111] antialiased overflow-x-hidden;
+    font-family: var(--font-roboto);
+  }
+}
+
+/* Halftone dot pattern background */
+.vintage-dots {
+  background-image: radial-gradient(#111 1.5px, transparent 1.5px);
+  background-size: 20px 20px;
+}
+
+/* Hand-Drawn Borders */
+.hand-drawn {
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px !important;
+}
+
+.hand-drawn-alt {
+  border-radius: 15px 225px 15px 255px/255px 15px 225px 15px !important;
+}
