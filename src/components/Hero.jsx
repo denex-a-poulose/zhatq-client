@@ -1,22 +1,15 @@
-import React, { useState } from 'react';
-import { RocketLaunch, CheckCircle, StarFour, ArrowBendRightDown, SealCheck, Sparkle, Checks } from '@phosphor-icons/react';
+import React from 'react';
+import { WhatsappLogo, Star, ArrowBendRightDown, Sparkle, Checks } from '@phosphor-icons/react';
+
+const WHATSAPP_NUMBER = '+918590616035'; // Replace with your actual number
+const WAITLIST_MESSAGE = encodeURIComponent("Hey! I'm interested in zhatQ. I'd love to join the waitlist and learn more about turning WhatsApp into a storefront!");
 
 export default function Hero() {
-  const [email, setEmail] = useState('');
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (email) {
-      setSubmitted(true);
-      setEmail('');
-      setTimeout(() => setSubmitted(false), 5000);
-    }
-  };
+  const whatsappLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${WAITLIST_MESSAGE}`;
 
   return (
     <section className="w-full relative bg-[#F4F0EB] overflow-hidden border-b-[3px] border-[#111] hand-drawn-alt">
-      
+
       {/* Brutalist Marquee */}
       <div className="w-full bg-[#FFE135] border-b-[3px] border-[#111] py-2 flex overflow-hidden whitespace-nowrap hand-drawn">
         <div className="animate-marquee flex gap-8 items-center font-black uppercase text-sm tracking-widest">
@@ -36,10 +29,10 @@ export default function Hero() {
       </div>
 
       <div className="w-full max-w-7xl mx-auto px-6 pt-16 pb-24 grid grid-cols-1 lg:grid-cols-12 gap-8 relative">
-        
+
         {/* Decorative Vintage Elements */}
         <div className="absolute top-20 left-10 hidden xl:block">
-          <StarFour size={64} weight="fill" className="text-[#111]" />
+          <Star size={64} weight="fill" className="text-[#111]" />
         </div>
         <div className="absolute bottom-24 right-12 hidden xl:block z-10">
           <div className="bg-[#FFB6C1] p-4 border-[3px] border-[#111] shadow-[6px_6px_0_0_#111] hand-drawn-alt">
@@ -49,11 +42,6 @@ export default function Hero() {
 
         {/* Left Column: Typography & Content */}
         <div className="lg:col-span-7 flex flex-col items-start justify-center z-10 relative">
-          
-          <div className="bg-white border-[3px] border-[#111] shadow-[4px_4px_0_0_#111] px-4 py-1 mb-10 flex items-center gap-2 transform -rotate-2 hand-drawn">
-            <SealCheck size={24} weight="fill" className="text-[#34B7F1]" />
-            <span className="font-bold text-sm tracking-widest uppercase">Verified Early Access</span>
-          </div>
 
           {/* Brutalist Typography */}
           <h1 className="text-[3.5rem] sm:text-[5rem] md:text-[6rem] font-bold tracking-tighter text-[#111] mb-10 flex flex-col items-start leading-[1.05]">
@@ -79,37 +67,23 @@ export default function Hero() {
             <div className="absolute -top-12 -right-8 hidden md:block animate-bounce">
               <ArrowBendRightDown size={64} weight="bold" className="text-[#111]" />
             </div>
-            
-            {!submitted ? (
-              <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 w-full max-w-lg">
-                <input 
-                  type="email" 
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Enter your email" 
-                  className="flex-1 px-6 py-4 border-[3px] border-[#111] shadow-[4px_4px_0_0_#111] text-lg font-bold text-[#111] focus:outline-none focus:translate-y-[2px] focus:translate-x-[2px] focus:shadow-[2px_2px_0_0_#111] transition-all placeholder-gray-500 bg-[#fff] hand-drawn"
-                  required
-                />
-                <button 
-                  type="submit" 
-                  className="bg-[#111] text-[#fff] px-8 py-4 border-[3px] border-[#111] shadow-[4px_4px_0_0_#00E676] font-black uppercase tracking-wide active:translate-y-[4px] active:translate-x-[4px] active:shadow-[0px_0px_0_0_#00E676] transition-all flex items-center justify-center gap-3 hover:bg-[#333] hand-drawn-alt"
-                >
-                  Join Waitlist
-                </button>
-              </form>
-            ) : (
-              <div className="bg-[#00E676] text-[#111] px-6 py-5 border-[3px] border-[#111] shadow-[4px_4px_0_0_#111] flex items-center gap-3 max-w-lg hand-drawn">
-                <CheckCircle size={28} weight="fill" />
-                <span className="font-bold text-xl uppercase tracking-wide">You're on the list!</span>
-              </div>
-            )}
+
+            <a
+              href={whatsappLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 bg-[#00E676] text-[#111] px-10 py-5 border-[3px] border-[#111] shadow-[6px_6px_0_0_#111] font-black uppercase tracking-wide text-xl active:translate-y-[6px] active:translate-x-[6px] active:shadow-[0px_0px_0_0_#111] hover:-translate-y-1 hover:shadow-[8px_8px_0_0_#111] transition-all hand-drawn-alt"
+            >
+              <WhatsappLogo size={28} weight="fill" />
+              Join Waitlist
+            </a>
           </div>
         </div>
 
         {/* Right Column: WhatsApp Chat UI Mockup */}
         <div className="hidden lg:flex lg:col-span-5 relative mt-8 lg:mt-0 items-center justify-center z-0">
           <div className="w-full max-w-sm mx-auto border-[3px] border-[#111] shadow-[8px_8px_0_0_#111] bg-white overflow-hidden hand-drawn-alt">
-            
+
             {/* Chat Header */}
             <div className="bg-[#075E54] px-4 py-3 flex items-center gap-3 border-b-[3px] border-[#111]">
               <div className="w-10 h-10 bg-[#00E676] border-[3px] border-[#111] flex items-center justify-center font-black text-[#111] text-sm hand-drawn">
@@ -189,7 +163,7 @@ export default function Hero() {
                 Type a message...
               </div>
               <div className="bg-[#00E676] p-2 border-[2px] border-[#111] shadow-[2px_2px_0_0_#111] hand-drawn-alt">
-                <RocketLaunch size={20} weight="fill" className="text-[#111]" />
+                <WhatsappLogo size={20} weight="fill" className="text-[#111]" />
               </div>
             </div>
           </div>
