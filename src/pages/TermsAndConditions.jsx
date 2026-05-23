@@ -19,7 +19,7 @@ export default function TermsAndConditions() {
       {/* Content */}
       <div className="max-w-4xl mx-auto px-6 py-16">
         <div className="bg-white border-[3px] border-[#111] shadow-[8px_8px_0_0_#111] p-8 sm:p-12 hand-drawn">
-          
+
           <div className="inline-block bg-[#34B7F1] text-[#111] border-[3px] border-[#111] shadow-[4px_4px_0_0_#111] px-5 py-2 mb-8 hand-drawn-alt">
             <h1 className="text-3xl sm:text-4xl font-black uppercase tracking-tight">Terms & Conditions</h1>
           </div>
@@ -27,7 +27,7 @@ export default function TermsAndConditions() {
           <p className="text-sm text-gray-500 font-bold uppercase tracking-widest mb-10">Last Updated: May 23, 2026</p>
 
           <div className="space-y-10 text-lg leading-relaxed">
-            
+
             {/* Agreement */}
             <section>
               <h2 className="text-2xl font-black uppercase mb-4 bg-[#FFE135] inline-block px-3 py-1 border-[2px] border-[#111] shadow-[2px_2px_0_0_#111] hand-drawn-alt">1. Agreement to Terms</h2>
@@ -140,7 +140,7 @@ export default function TermsAndConditions() {
               </p>
               <div className="mt-4 bg-[#F4F0EB] border-[2px] border-[#111] shadow-[3px_3px_0_0_#111] p-5 hand-drawn">
                 <p className="font-bold"><a href="https://safora.xyz" target="_blank" rel="noopener noreferrer" className="text-[#128C7E] underline hover:text-[#00E676] transition-colors">Safora</a> (Parent Company of zhatQ)</p>
-                <p className="mt-1">Email: <a href="mailto:hello@safora.com" className="text-[#128C7E] underline font-bold hover:text-[#00E676] transition-colors">hello@safora.com</a></p>
+                <p className="mt-1">Email: <a href="mailto:admin@safora.xyz" className="text-[#128C7E] underline font-bold hover:text-[#00E676] transition-colors">admin@safora.xyz</a></p>
               </div>
             </section>
 

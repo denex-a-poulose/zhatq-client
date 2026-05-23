@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function HowItWorks() {
   return (
-    <section className="w-full py-20 px-6 bg-[#F4F0EB] border-b-[3px] border-[#111] overflow-hidden">
+    <section className="w-full relative py-20 px-6 bg-[#F4F0EB] border-b-[3px] border-[#111] hand-drawn overflow-hidden">
       <div className="max-w-4xl mx-auto relative">
 
         {/* The Paper Background */}
@@ -76,7 +76,7 @@ export default function HowItWorks() {
           </div>
 
           {/* Doodles on the side */}
-          <div className="absolute right-4 sm:right-12 top-20 opacity-40 transform rotate-12 hidden sm:block text-[#111]">
+          <div className="absolute right-4 sm:right-12 top-20 opacity-40 hidden sm:block text-[#111] animate-float">
             <svg width="50" height="50" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M10 30H50M30 10V50" stroke="currentColor" strokeWidth="4" strokeLinecap="round" />
               <circle cx="30" cy="30" r="15" stroke="currentColor" strokeWidth="4" strokeDasharray="6 6" />
